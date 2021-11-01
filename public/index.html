@@ -29,9 +29,13 @@
             nombre:'Josue'
         });
 
-        socket.on('mensaje',(payload)=>{
+        socket.on('nuevo-mensaje',(payload)=>{
          console.log('Escuchado al server',payload);
-     });
+         });
+
+         socket.on('bandas-activas',(bands)=>{
+            console.table(bands);
+         });
     </script>
 </body>
 </html>
